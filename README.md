@@ -2,7 +2,7 @@
 
 Commandline DDOS Tool written in C#.
 <br>
-V1.0 Has been created by Stefan Damen.
+v0.1 Has been created by Stefan Damen.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
@@ -12,7 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 What you need to have to use this tool:
 
 ```
-A file called ip-port.txt on your desktop including on the first line the IP, on the second line the time in seconds.
+A Windows computer with the .NET Framework.
+A file on your desktop called ip-port.txt (included in releases).
+The IP adres of the target.
 ```
 
 ### Installing
@@ -21,17 +23,21 @@ A step by step series of examples that tells you how to get a version running.
 
 ```
 Download the latest .exe from the releases tab.
-Add the target IP and time in seconds into the txt file on your desktop.
+Place the .txt file that is included on your desktop.
+Insert the target IP on line 1.
+Insert the time in seconds on line 2.
+Run the included .exe file from any location.
 ```
 
 ## Built With
 
-* [VisualStudio](http://www.visualstudio.com/) - The IDE that has been used
+* [Microsoft Visual Studio](http://www.visualstudio.com/) - The IDE that has been used
 * [Sourcetree](https://www.sourcetreeapp.com/) - Sourcecontrol Management
 
 ## Open tasks
 
 * GUI
+* Better and more efficient code
 * Option to change port
 * Build in portscanner
 
