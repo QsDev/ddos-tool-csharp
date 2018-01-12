@@ -1,8 +1,8 @@
-# DDOS-Tool-CSharp
+# DDOS Tool C#
 
-Commandline DDOS Tool written in C# 
+Commandline DDOS Tool written in C#.
 <br>
-All credits go to Stefan Damen
+V1.0 Has been created by Stefan Damen.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
@@ -13,7 +13,6 @@ What you need to have to use this tool:
 
 ```
 A file called ip-port.txt on your desktop including on the first line the IP, on the second line the time in seconds.
-(Temporary method, GUI Coming soon! :D)
 ```
 
 ### Installing
@@ -22,18 +21,23 @@ A step by step series of examples that tells you how to get a version running.
 
 ```
 Download the latest .exe from the releases tab.
-Add the target IP into the txt file on your desktop.
-Set the time in seconds for how long you want to ddos.
+Add the target IP and time in seconds into the txt file on your desktop.
 ```
 
 ## Built With
 
 * [VisualStudio](http://www.visualstudio.com/) - The IDE that has been used
-* [Sourcetree](https://www.sourcetreeapp.com/) - Source control
+* [Sourcetree](https://www.sourcetreeapp.com/) - Sourcecontrol Management
+
+## Open tasks
+
+* GUI
+* Option to change port
+* Build in portscanner
 
 ## Contributing
 
-You can help this project by reporting bugs or by making a pullrequest
+You can help this project by reporting bugs or by making a pullrequest.
 
 ## Authors
 
@@ -42,8 +46,8 @@ You can help this project by reporting bugs or by making a pullrequest
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Illegal usage is prohibited
 
-Any kind of illegal usage of this tool to cause damage to others can land you directly in jail :) <br> Please use this tool for security testing purposes only. <br> Me (Luuk Kenselaar) and Stefan Damen are not responsible for any of your actions.
+Any kind of illegal usage of this tool to cause damage to others can land you directly in jail. <br> Please use this tool for security testing purposes only. <br> Me (Luuk Kenselaar) and Stefan Damen are not responsible for any of your actions. <br> 
