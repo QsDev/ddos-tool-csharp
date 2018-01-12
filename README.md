@@ -1,6 +1,6 @@
 # DDOS Tool C#
 
-Commandline DDOS Tool written in C#.
+Windows DDOS Tool written in C#.
 <br>
 v0.1 Has been created by Stefan Damen.
 ## Getting Started
@@ -22,10 +22,10 @@ The IP adres of the target.
 A step by step series of examples that tells you how to get a version running.
 
 ```
-Download the latest .exe from the releases tab.
+Download the latest zip file containing the .exe and .txt from the releases tab.
 Place the .txt file that is included on your desktop.
 Insert the target IP on line 1.
-Insert the time in seconds on line 2.
+Insert the attack time in seconds on line 2.
 Run the included .exe file from any location.
 ```
 
