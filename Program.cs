@@ -17,11 +17,11 @@ class Syn
 {
     static DateTime start = DateTime.Now;
 
-    //packages sent bevore console logging status
+    //Packages send before console logging status
     static int loggingTime = 5084;
     static int total = 0;
     static int per = 0;
-    // higher = slower
+    //Higher the amount = slower
     static int speed = 12;
     static string p = "1234567890123456789012345678901234567890";
     static string data = (p + p + p + p + p + p + p + p + p + p);
@@ -76,7 +76,6 @@ class Syn
         int logDataCounter = 0;
         while (true)
         {
-
             per++;
             if (per > speed)
             {
