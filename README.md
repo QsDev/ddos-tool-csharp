@@ -1,5 +1,5 @@
 # DDOS Tool C#
-
+[![Build status](https://ci.appveyor.com/api/projects/status/fm7eylftp8mv9one?svg=true)](https://ci.appveyor.com/project/Luuk2016/ddos-tool-csharp)[![Build Status](https://travis-ci.org/Luuk2016/DDoS-Tool-CSharp.svg?branch=master)](https://travis-ci.org/Luuk2016/DDoS-Tool-CSharp)<br>
 Windows DDOS Tool written in C#.
 <br>
 v0.1 Has been created by Stefan Damen.
