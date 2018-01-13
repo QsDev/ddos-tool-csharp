@@ -33,6 +33,7 @@ Run the included .exe file from any location.
 
 * [Microsoft Visual Studio](http://www.visualstudio.com/) - The IDE that has been used
 * [Sourcetree](https://www.sourcetreeapp.com/) - Sourcecontrol Management
+* [Travis-CI](https://www.travis-ci.org/) - Continuous Integration
 
 ## Open tasks
 
