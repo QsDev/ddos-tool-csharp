@@ -1,5 +1,5 @@
 # DDOS Tool C#
-[![Build Status](https://travis-ci.org/Luuk2016/DDoS-Tool-CSharp.svg?branch=master)](https://travis-ci.org/Luuk2016/DDoS-Tool-CSharp)&nbsp;[![Build status](https://ci.appveyor.com/api/projects/status/fm7eylftp8mv9one?svg=true)](https://ci.appveyor.com/project/Luuk2016/ddos-tool-csharp)&nbsp;[![GitHub license](https://img.shields.io/github/license/Luuk2016/DDoS-Tool-CSharp.svg)](https://github.com/Luuk2016/DDoS-Tool-CSharp/blob/master/LICENSE)&nbsp;[![GitHub issues](https://img.shields.io/github/issues/Luuk2016/DDoS-Tool-CSharp.svg)](https://github.com/Luuk2016/DDoS-Tool-CSharp/issues)<br>
+[![Build Status](https://travis-ci.org/Luuk2016/ddos-tool-csharp.svg?branch=master)](https://travis-ci.org/Luuk2016/ddos-tool-csharp)&nbsp;[![Build status](https://ci.appveyor.com/api/projects/status/fm7eylftp8mv9one?svg=true)](https://ci.appveyor.com/project/Luuk2016/ddos-tool-csharp)&nbsp;[![GitHub license](https://img.shields.io/github/license/Luuk2016/DDoS-Tool-CSharp.svg)](https://github.com/Luuk2016/DDoS-Tool-CSharp/blob/master/LICENSE)&nbsp;[![GitHub issues](https://img.shields.io/github/issues/Luuk2016/DDoS-Tool-CSharp.svg)](https://github.com/Luuk2016/DDoS-Tool-CSharp/issues)<br>
 Windows DDOS Tool written in C#.
 <br>
 v0.1 Has been created by Stefan Damen.
